@@ -1,0 +1,478 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+--window
+local Window = OrionLib:MakeWindow({Name = "All universe hub kamehameha sim", HidePremium = false, IntroText = "All universe hub", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--tabs
+local mainTab = Window:MakeTab({
+  Name = "main",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+
+local cityTab = Window:MakeTab({
+  Name = "city ",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+local snowTab = Window:MakeTab({
+  Name = "Snow city ",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+local MagmaTab = Window:MakeTab({
+  Name = "magam city ",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+local legendTab = Window:MakeTab({
+  Name = "Legends Highway ",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+local hatchTab = Window:MakeTab({
+  Name ="hatching ",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+--section
+local Section = mainTab:AddSection({
+  Name = "farm"
+})
+
+
+--values
+getgenv().raid=false
+getgenv().rebrith=false
+getgenv().chest=false
+getgenv().gem = false
+getgenv().speed = false
+getgenv().exp = false
+getgenv().a = false
+getgenv().b = false
+getgenv().c = false
+getgenv().d = false
+getgenv().e = false
+getgenv().h = false
+getgenv().i = false
+getgenv().l = false
+getgenv().k = false
+getgenv().re = false
+getgenv().bl = false
+getgenv().yo = false
+getgenv().gr = false
+getgenv().pu = false
+
+--function
+function doraid()
+     while getgenv().raid == true do 
+                      local args = {
+                                   [1] = "joinRace"
+}
+
+                       game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("raceEvent"):FireServer(unpack(args))
+                       
+                        wait(0.1)
+                         
+            end
+end 
+
+function dorebrith()
+     while getgenv().rebrith() == true do 
+                      local args = {
+                                   [1] = "rebirthRequest"
+}
+
+                       game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("rebirthEvent"):FireServer(unpack(args))
+                       
+                        wait(0.1)
+                         
+            end
+end 
+
+ function dochest()
+     while getgenv().chest == true do 
+                      local args = {
+                         [1] = workspace:WaitForChild("rewardChests"):WaitForChild("rewardChest")
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("collectCourseChestRemote"):InvokeServer(unpack(args))
+                       
+                    wait(1)
+                         
+            end
+end            
+function dogem()
+    while getgenv().gem== true do
+        local args = {
+                  [1] = "collectOrb",
+                  [2] = "Gem",
+                  [3] = "City"
+}
+
+        game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+
+        wait(0.01)
+    end
+end 
+
+function dospeed()
+    while getgenv().speed == true do
+        local args = {
+                    [1] = "collectOrb",
+                    [2] = "Red Orb",
+                    [3] = "City"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.001)     
+    end
+end
+function doexp()
+           while getgenv().exp == true do
+          local args = {
+                    [1] = "collectOrb",
+                    [2] = "Yellow Orb",
+                    [3] = "City"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.001)     
+    end
+end
+function doa()
+    while getgenv().a== true do
+        local args = {
+                  [1] = "collectOrb",
+                  [2] = "Gem",
+                  [3] = "Snow City"
+}
+
+        game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+
+        wait(0.01)
+    end
+end 
+
+function dob()
+    while getgenv().b == true do
+        local args = {
+                    [1] = "collectOrb",
+                    [2] = "Red Orb",
+                    [3] = "Snow City"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.001)     
+    end
+end
+function doc()
+           while getgenv().c == true do
+          local args = {
+                    [1] = "collectOrb",
+                    [2] = "Yellow Orb",
+                    [3] = "Snow City"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.001)     
+    end
+end
+function dod()
+    while getgenv().d== true do
+        local args = {
+                  [1] = "collectOrb",
+                  [2] = "Gem",
+                  [3] = "Magma City"
+}
+
+        game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+
+        wait(0.01)
+    end
+end 
+
+function doe()
+    while getgenv().e == true do
+        local args = {
+                    [1] = "collectOrb",
+                    [2] = "Red Orb",
+                    [3] = "Magma City"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.001)     
+    end
+end
+function doh()
+           while getgenv().h  == true do
+          local args = {
+                    [1] = "collectOrb",
+                    [2] = "Yellow Orb",
+                    [3] = "Magma City"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.001)     
+    end
+end
+function doi()
+           while getgenv().i  == true do
+          local args = {
+                    [1] = "collectOrb",
+                    [2] = "Gem",
+                    [3] = "Legends Highway"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.01)     
+    end
+end
+
+function dol()
+           while getgenv().l  == true do
+          local args = {
+                    [1] = "collectOrb",
+                    [2] = "Red Orb",
+                    [3] = "Legends Highway"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.001)     
+    end
+end
+
+function dok()
+           while getgenv().k  == true do
+          local args = {
+                    [1] = "collectOrb",
+                    [2] = "Yellow Orb"
+                    [3] = "Legends Highway"
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+        
+        wait(0.001)     
+    end
+end
+--hatch
+function dore()
+           while getgenv().k  == true do
+          local args = {
+                    [1] = "openCrystal",
+                    [2] = "Red Crystal"
+                    
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):FireServer(unpack(args))
+        
+        wait(0.5)     
+    end
+end
+function dobl()
+           while getgenv().k  == true do
+          local args = {
+                    [1] = "openCrystal",
+                    [2] = "Blue Crystal"
+                   
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):FireServer(unpack(args))
+        
+        wait(0.5)     
+    end
+end
+
+function doyo()
+           while getgenv().k  == true do
+          local args = {
+                    [1] = "openCrystal",
+                    [2] = "Yellow Crystal"
+                    
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):FireServer(unpack(args))
+        
+        wait(0.5)     
+    end
+end
+
+function dogr()
+           while getgenv().k  == true do
+          local args = {
+                    [1] = "openCrystal",
+                    [2] = "Green Crystal"
+                    
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):FireServer(unpack(args))
+        
+        wait(0.5)     
+    end
+end
+
+function dopu()
+           while getgenv().k  == true do
+          local args = {
+                    [1] = "openCrystal",
+                    [2] = "purple Crystal"
+                    
+}
+
+               game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):FireServer(unpack(args))
+        
+        wait(0.5)     
+    end
+end
+
+--toggles
+mainTab:AddToggle({
+  Name = "auto race join",
+  Default = false,
+  Callback = function(bool)
+    getgenv().raid = bool
+    if bool then 
+      doraid()
+    end
+  end})
+
+mainTab:AddToggle({
+  Name = "auto rebrith",
+  Default = false,
+  Callback = function(bool)
+    getgenv().rebrith = bool
+    if bool then 
+      dorebirth()
+    end
+  end})
+  
+ 
+  
+cityTab:AddToggle({
+  Name = "auto gems",
+  Default = false,
+  Callback = function(bool)
+    getgenv().gem = bool
+    if bool then 
+      dogem()
+    end
+  end})
+
+  --toggles
+  cityTab:AddToggle({
+    Name = "auto speed",
+    Default = false,
+    Callback = function(bool)
+      getgenv().speed = bool
+      if bool then 
+        dospeed()
+      end
+    end}) 
+    
+    cityTab:AddToggle({
+    Name = "auto exp ",
+    Default = false,
+    Callback = function(bool)
+      getgenv().exp = bool
+      if bool then 
+        doexp()
+      end
+    end}) 
+    
+ snowTab:AddToggle({
+  Name = "auto gems",
+  Default = false,
+  Callback = function(bool)
+    getgenv().a = bool
+    if bool then 
+      doa()
+    end
+  end})
+
+  --toggles
+  snowTab:AddToggle({
+    Name = "auto speed",
+    Default = false,
+    Callback = function(bool)
+      getgenv().b = bool
+      if bool then 
+        dob()
+      end
+    end}) 
+    
+    snowTab:AddToggle({
+    Name = "auto exp ",
+    Default = false,
+    Callback = function(bool)
+      getgenv().c = bool
+      if bool then 
+        doc()
+      end
+    end})
+    
+MagmaTab:AddToggle({
+  Name = "auto gems",
+  Default = false,
+  Callback = function(bool)
+    getgenv().d = bool
+    if bool then 
+      dod()
+    end
+  end})
+
+  MagmaTab:AddToggle({
+    Name = "auto speed",
+    Default = false,
+    Callback = function(bool)
+      getgenv().e = bool
+      if bool then 
+        doe()
+      end
+    end}) 
+    
+    MagmaTab:AddToggle({
+    Name = "auto exp ",
+    Default = false,
+    Callback = function(bool)
+      getgenv().h = bool
+      if bool then 
+        doh()
+      end
+    end})  
+    
+ legendTab:AddToggle({
+    Name = "auto gem ",
+    Default = false,
+    Callback = function(bool)
+      getgenv().i = bool
+      if bool then 
+        doi()
+      end
+    end})
+    
+legendTab:AddToggle({
+    Name = "auto speed ",
+    Default = false,
+    Callback = function(bool)
+      getgenv().l = bool
+      if bool then 
+        dol()
+      end
+    end})          
+  legendTab:AddToggle({
+    Name = "auto exp ",
+    Default = false,
+    Callback = function(bool)
+      getgenv().k = bool
+      if bool then 
+        dok()
+      end
+    end})      
